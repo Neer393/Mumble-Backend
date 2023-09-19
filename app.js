@@ -18,7 +18,7 @@ app.use(cookieParser());
 app.use(helmet());
 app.use(xss());
 app.use(cors({
-    origin: '*',
+    origin: 'https://mumble-neer393.netlify.app/',
     credentials: true,
 }));
 app.use(mongoSanitize());
