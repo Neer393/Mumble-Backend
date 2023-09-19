@@ -16,6 +16,7 @@ const sendToken = (user,statuscode,res)=>{
         domain:'https://mumble-neer393.netlify.app',
         secure: true,
         sameSite:'none',
+        httpOnly:true
     });
     user.password = undefined;
     res.status(statuscode).json({
