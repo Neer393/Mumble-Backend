@@ -18,7 +18,7 @@ app.use(cookieParser());
 app.use(helmet());
 app.use(xss());
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: '*',
     credentials: true,
 }));
 app.use(mongoSanitize());
