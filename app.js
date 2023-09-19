@@ -12,7 +12,7 @@ const meetingRoutes = require('./routes/meetingRoutes');
 const globalErrorHandler = require('./controller/errorController');
 
 const app=express();
-
+app.enable('trust proxy');
 app.use(express.json());
 app.use(cookieParser());
 app.use(helmet());
