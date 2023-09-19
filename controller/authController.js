@@ -12,8 +12,7 @@ const sendToken = (user,statuscode,res)=>{
         expiresIn:process.env.JWT_EXPIRES_IN
     });
     res.cookie('jwt',token,{
-        expires:new Date(Date.now()+30*24*60*60*1000),
-        httpOnly:true
+        expires:new Date(Date.now()+30*24*60*60*1000)
     });
     user.password = undefined;
     res.status(statuscode).json({
